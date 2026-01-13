@@ -25,7 +25,7 @@ The data used represents a single year, so all insights are cross-sectional rath
 
 
 
-🚧 ## Project Status
+## Project Status
 
 This is an ongoing project under active development.
 Future work includes:
@@ -39,7 +39,7 @@ Future work includes:
 - improved documentation of healthcare domain concepts.
 
 
-📌 ## What I Learned
+## What I Learned
 
 Through this project, I developed a deeper understanding of working with real-world healthcare data, particularly CMS Medicare Part D datasets that are not designed for direct BI use. Key learnings include:
 
