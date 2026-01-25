@@ -7,7 +7,7 @@ This project explores the CMS Medicare Part D Plan Information dataset with the 
 
 The dataset is large and complex, reflecting how Medicare plans are administered in the real world. Rather than oversimplifying the data, this project focuses on understanding the true structure of Medicare plans and modeling the data correctly before visualization.
 
-This is an ongoing project, and the dashboard evolves as deeper insights into the data and healthcare domain are gained.
+This is an ongoing project, and the dashboard evolves as deeper insights into the data are gained.
 
 
 
