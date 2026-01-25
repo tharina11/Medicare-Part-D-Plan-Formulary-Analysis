@@ -1,59 +1,70 @@
 # Medicare-Part-D-Plan-Formulary-Analysis
 
 
-## About the Project
+## Project Overview
 
-This project analyzes CMS Medicare Part D plan and drug formulary data using SQL and Tableau to explore how prescription drug coverage varies across plans, insurers, and geographic regions in the United States.
+This project explores the CMS Medicare Part D Plan Information dataset with the goal of building an analytical Tableau dashboard that helps users understand plan availability, benefit variation, and cost structures across regions in the United States.
 
-The raw CMS datasets are highly granular and regulatory in nature, so this project focuses on:
+The dataset is large and complex, reflecting how Medicare plans are administered in the real world. Rather than oversimplifying the data, this project focuses on understanding the true structure of Medicare plans and modeling the data correctly before visualization.
 
-- understanding the grain and structure of healthcare data,
-
-- designing analytically correct aggregations, and
-
-- transforming large tables into BI-ready fact tables suitable for visualization.
-
-Key analyses include:
-
-- comparison of drug coverage breadth across Part D plans,
-
-- geographic variation in plan availability and coverage at the state level, and
-
-- insurer-level (contract-level) comparisons of plan portfolios.
-
-The data used represents a single year, so all insights are cross-sectional rather than time-series.
+This is an ongoing project, and the dashboard evolves as deeper insights into the data and healthcare domain are gained.
 
 
 
 
-## Project Status
+## Business Context
 
-This is an ongoing project under active development.
-Future work includes:
+Medicare Part D plans are offered by private insurers under contracts with CMS. A single plan may appear to be the same product to consumers, but in reality it can have multiple benefit variations depending on eligibility, pricing, and geography.
 
-- deeper exploratory analysis,
+CMS captures this complexity using a hierarchy of:
 
-- additional derived metrics,
+- Contract
 
-- refinement of Tableau dashboards, and
+- Plan
 
-- improved documentation of healthcare domain concepts.
+- Segment (benefit variation)
+
+- Geography (state / county)
+
+Understanding this structure is critical for accurate analysis and reporting.
 
 
 
 
-## What I Learned
+## Analytical Approach
 
-Through this project, I developed a deeper understanding of working with real-world healthcare data, particularly CMS Medicare Part D datasets that are not designed for direct BI use. Key learnings include:
+To make the dataset usable for Tableau and exploratory analysis:
 
-- How to identify and work with table grain and composite keys in regulatory datasets.
+- Large CMS tables were reduced into analysis-ready extracts
 
-- The importance of formulary_id as a bridge between plan-level and drug-level data.
+- Fact tables were aggregated at appropriate grains (plan-segment level)
 
-- Practical strategies for reducing large, complex tables into analytically correct, Tableau-ready fact tables.
+- Supporting dimension tables were created for:
 
-- How Medicare Part D plans vary by insurer (contract) and geography, and why location matters in plan-level analysis.
+	- Geography
 
-- Balancing domain understanding and technical execution to avoid misinterpretation in healthcare analytics.
+	- Drug coverage characteristics
+
+- Joins were designed to respect CMS-defined relationships (e.g., formulary → plan via formulary_id)
+
+The focus was on data integrity first, visualization second.
+
+
+
+
+
+## Dashboard Goals
+
+The Tableau dashboard is designed to answer questions such as:
+
+- How many distinct plan offerings exist by region?
+
+- How do premiums and deductibles vary across plan segments?
+
+- How does drug coverage breadth differ across plans?
+
+- Where do consumers have more or fewer plan choices?
+
+The dashboard intentionally avoids misleading simplifications and reflects how CMS actually structures Medicare data.
 
 This project reinforced the value of thoughtful data modeling before visualization, especially when working with complex industry data.
