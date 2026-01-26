@@ -75,6 +75,7 @@ The dashboard intentionally avoids misleading simplifications and reflects how C
 
 [![Medicare Part D Dashboard Preview](images/overview.png)](https://public.tableau.com/app/profile/tharindu.abeysinghe/viz/MedicarePartDPlanCoverageandCostOverview/PlanCoverageOverview)
 
+Click on the image to view the interactive dashboard.
 
 
 
